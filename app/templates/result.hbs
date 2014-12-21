@@ -1,0 +1,16 @@
+{{#if result}}
+<table class="pure-table pure-table-horizontal pure-table-striped">
+  <thead>
+    <tr>
+      <th>name</th><th>cost</th><th>type</type>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each result}}
+    <tr>
+      <td>{{cardName}}</td><td>{{cost}}</td><td>{{typeStr}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{/if}}

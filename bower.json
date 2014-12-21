@@ -1,0 +1,23 @@
+{
+  "name": "dominion-randomizer",
+  "version": "0.0.0",
+  "homepage": "https://github.com/succhiello/dominion-randomizer",
+  "authors": [
+    "Satoshi Ebihara <succhiello@gmail.com>"
+  ],
+  "description": "dominion kingdom card randomizer",
+  "keywords": [
+    "Bacon.js"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "pure": "~0.5.0"
+  }
+}

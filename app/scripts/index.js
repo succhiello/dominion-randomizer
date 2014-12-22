@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     render('header');
     render('body');
-    render('cards', {cards: cards});
+    render('cards', {cards: _.groupBy(cards, 'cost')});
 
     $body.asEventStream('click', '#randomize')
         .map(randomize, cards)

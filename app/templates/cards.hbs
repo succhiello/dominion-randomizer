@@ -1,14 +1,11 @@
-<table class="pure-table pure-table-horizontal pure-table-striped">
-  <thead>
-    <tr>
-      <th>name</th><th>cost</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each cards}}
-    <tr>
-      <td>{{name}}</td><td>{{cost}}</td>
-    </tr>
-    {{/each}}
-  </tbody>
+<div class="pure-menu pure-menu-open">
+  <a class="pure-menu-heading">kingdom card</a>
+  {{#each cards}}
+    <ul>
+      <li><a class="pure-menu-heading">cost {{@key}}</a></li>
+      {{#each this}}
+        <li><a>{{name}}</a></li>
+      {{/each}}
+    </ul>
+  {{/each}}
 </table>

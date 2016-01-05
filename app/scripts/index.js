@@ -1,7 +1,5 @@
 'use strict';
 
-require('pure');
-require('../styles/app.css');
 require('baconjs');
 
 var cards = require('./cards.ls');
@@ -15,7 +13,9 @@ $(document).ready(function() {
     render('cards', {cards: _.groupBy(cards, 'cost')});
 
     $body.asEventStream('click', '#randomize')
-        .map(randomize, cards)
+        .map(cards)
+        .map(__.shuffle)
+        .map(__.take, 10)
         .map(function(result) { return {result: result}; })
         .assign(render, 'result');
 });
@@ -25,5 +25,5 @@ function render(el, data) {
 }
 
 function randomize(xs) {
-    return _(xs).shuffle().first(10).value();
+    return _(xs).shuffle().take(10).value();
 }

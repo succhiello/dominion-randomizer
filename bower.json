@@ -19,5 +19,8 @@
   ],
   "dependencies": {
     "pure": "~0.5.0"
+  },
+  "devDependencies": {
+    "gumby": "~2.6.3"
   }
 }

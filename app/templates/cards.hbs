@@ -1,11 +1,10 @@
-<div class="pure-menu pure-menu-open">
-  <a class="pure-menu-heading">kingdom card</a>
+<nav class="vertical-nav">
   {{#each cards}}
     <ul>
-      <li><a class="pure-menu-heading">cost {{@key}}</a></li>
+      <li class="info label">cost {{@key}}</li>
       {{#each this}}
-        <li><a>{{cardName}}</a></li>
+        <li>{{cardName}}</li>
       {{/each}}
     </ul>
   {{/each}}
-</table>
+</nav>
